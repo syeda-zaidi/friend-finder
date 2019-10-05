@@ -12,11 +12,8 @@ app.use(bodyParser.json());
 app.use(express.static("public")); // or
 // app.use(express.static(path.join(__dirname + "app/public")))
 
-// var routes = ("./app/routing");
-
-// app.use(routes);
 require("./app/routing/htmlRoutes.js")(app);
-// require('./app/routing/apiRoutes.js')(app)
+require('./app/routing/apiRoutes.js')(app)
 
 app.listen(PORT, function () {
     console.log ("server listeing on http://localhost:" + PORT );
