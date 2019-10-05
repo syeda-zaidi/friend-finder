@@ -16,13 +16,14 @@ app.use(express.static("public")); // or
 
 // app.use(routes);
 require("./app/routing/htmlRoutes.js")(app);
-require('./app/routing/apiRoutes.js')(app)
+// require('./app/routing/apiRoutes.js')(app)
 
 app.listen(PORT, function () {
     console.log ("server listeing on http://localhost:" + PORT );
-}).catch(function (err){ 
-    if (err) {
-        console.log(err);
-    }
-}) 
+})
+// .catch(function (err){ 
+//     if (err) {
+//         console.log(err);
+//     }
+// }) 
 
